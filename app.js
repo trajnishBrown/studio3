@@ -37,12 +37,20 @@ const updatePage = async () => {
 
   // TODO: Create a new HTML element to display your data
   // TODO: Append your new element to the page
+  const newElement = document.createElement("div");
+  newElement.className = "fruit";
+  const header = document.createElement("h2");
+  header.innerHTML = "Fruits whose sugar content is > 15";
+  newElement.append(header);
+
   filteredFruits.map((fruit) => {
-    const newElement = document.createElement("div");
-    newElement.innerHTML = fruit.name;
-    const existingElement = document.getElementById("cs1300-gallery");
-    existingElement.append(newElement);
+    const fruitName = document.createElement("p");
+    fruitName.innerHTML = fruit.name;
+    newElement.append(fruitName);
   });
+
+  const existingElement = document.getElementById("cs1300-gallery");
+  existingElement.append(newElement);
 };
 
 // SAMPLE CODE of how to create and append a new HTML element to the page

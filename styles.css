@@ -32,4 +32,12 @@ Selects all image tags and makes them 500px;
   display: flex;
   justify-content: center;
   margin: 10px;
+  height: 40px;
+}
+
+.fruit {
+  background-color: lightgreen;
+  border: 1px solid black;
+  height: auto;
+  text-align: center;
 }
